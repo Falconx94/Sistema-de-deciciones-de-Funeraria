@@ -10,11 +10,11 @@ namespace Sistema_de_deciciones_de_Funeraria
     class reglas
     {
         public int resultado, paquete;
-        public double ingresos, mensualidad, enganche, acumulables;
+        public double ingresos, mensualidad, enganche, acumulables, acum_res;
         public byte estadocivil;
         //recordad transformar el tipo de dato del textbox antes de llamar  a la funcion
         // REGLAS DE DECISIÓN: (PARA EL INGRESO ACUMULABLE)
-        public void Desicion_Rules(byte estadocivil ,int hijos, int ingresos) // En base al ingreso registrado, registrar el procentaje de su ingreso acumulable
+        /*public void Desicion_Rules(byte estadocivil ,int hijos, double ingresos, double acumulables) // En base al ingreso registrado, registrar el procentaje de su ingreso acumulable
         {
             // soltero 0, casado 1
             try
@@ -45,7 +45,7 @@ namespace Sistema_de_deciciones_de_Funeraria
                 MessageBox.Show("Error", "Ha ocurrido la siguiente excepcion: " + ex);
             }
         }
-
+        */
         public int Acumulable(double acumulables) //REGLAS DE DECISIÓN: (PARA EL PLAN SUGERIDO)
         {
 
