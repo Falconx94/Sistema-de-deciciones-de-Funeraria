@@ -4,6 +4,15 @@
 
 **Materia: Toma de desiciones** :thought_balloon:
 ### INTEGRANTES: :zzz:
-[Github:  @alex_sobnes](https://github.com/alex-18030050)
+[Github: @Ricardo Mascareño](https://github.com/Falconx94)
 <br>
-los demas... :sleeping:
+[Github:  @Alexis Soberanes](https://github.com/alex-18030050)
+<br>
+[Github:  @Flavio C. Morales](https://github.com/dograsmo20)
+<br>
+[Github:  @Alejandro Oros](https://github.com/blackgold21)
+<br>
+[Github:  @Fausto G. Valenzuela](https://github.com/dawling)
+<br>
+
+
