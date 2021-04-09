@@ -173,6 +173,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.txt_Cliente.Name = "txt_Cliente";
             this.txt_Cliente.Size = new System.Drawing.Size(240, 20);
             this.txt_Cliente.TabIndex = 14;
+            this.txt_Cliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cliente_KeyPress);
             // 
             // txt_Domicilio
             // 
