@@ -30,27 +30,27 @@ namespace Sistema_de_deciciones_de_Funeraria
         private void InitializeComponent()
         {
             this.Ficha_1 = new System.Windows.Forms.GroupBox();
+            this.pack_1 = new System.Windows.Forms.Label();
             this.cant_1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Ficha_2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Ficha_3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Ficha_4 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pack_1 = new System.Windows.Forms.Label();
             this.pack_2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.cant_2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Ficha_3 = new System.Windows.Forms.GroupBox();
             this.pack_3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Cant_3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.Ficha_4 = new System.Windows.Forms.GroupBox();
             this.pack_4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.Cant_4 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Ficha_1.SuspendLayout();
             this.Ficha_2.SuspendLayout();
@@ -70,6 +70,15 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Ficha_1.TabIndex = 0;
             this.Ficha_1.TabStop = false;
             this.Ficha_1.Text = "Ficha de pago 1";
+            // 
+            // pack_1
+            // 
+            this.pack_1.AutoSize = true;
+            this.pack_1.Location = new System.Drawing.Point(359, 58);
+            this.pack_1.Name = "pack_1";
+            this.pack_1.Size = new System.Drawing.Size(63, 13);
+            this.pack_1.TabIndex = 3;
+            this.pack_1.Text = "**Paquete**";
             // 
             // cant_1
             // 
@@ -112,6 +121,15 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Ficha_2.TabStop = false;
             this.Ficha_2.Text = "Ficha de Pago 2";
             // 
+            // pack_2
+            // 
+            this.pack_2.AutoSize = true;
+            this.pack_2.Location = new System.Drawing.Point(166, 67);
+            this.pack_2.Name = "pack_2";
+            this.pack_2.Size = new System.Drawing.Size(63, 13);
+            this.pack_2.TabIndex = 6;
+            this.pack_2.Text = "**Paquete**";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -120,6 +138,26 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Fecha";
+            // 
+            // cant_2
+            // 
+            this.cant_2.AutoSize = true;
+            this.cant_2.Location = new System.Drawing.Point(237, 41);
+            this.cant_2.Name = "cant_2";
+            this.cant_2.Size = new System.Drawing.Size(65, 13);
+            this.cant_2.TabIndex = 5;
+            this.cant_2.Text = "**Cantidad**";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(22, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(380, 39);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
+    "pto de\r\nPAGO DE PRIMER MENSUALIDAD por la compra y adquisición \r\nde un paquete f" +
+    "unerario tipo:\r\n";
             // 
             // Ficha_3
             // 
@@ -134,6 +172,15 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Ficha_3.TabStop = false;
             this.Ficha_3.Text = "Ficha de pago 3";
             // 
+            // pack_3
+            // 
+            this.pack_3.AutoSize = true;
+            this.pack_3.Location = new System.Drawing.Point(166, 67);
+            this.pack_3.Name = "pack_3";
+            this.pack_3.Size = new System.Drawing.Size(63, 13);
+            this.pack_3.TabIndex = 9;
+            this.pack_3.Text = "**Paquete**";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -142,6 +189,26 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Fecha";
+            // 
+            // Cant_3
+            // 
+            this.Cant_3.AutoSize = true;
+            this.Cant_3.Location = new System.Drawing.Point(237, 41);
+            this.Cant_3.Name = "Cant_3";
+            this.Cant_3.Size = new System.Drawing.Size(65, 13);
+            this.Cant_3.TabIndex = 8;
+            this.Cant_3.Text = "**Cantidad**";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(380, 39);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
+    "pto de\r\nPAGO DE SEGUNDA MENSUALIDAD  por la compra y adquisición\r\nde un paquete " +
+    "funerario tipo:\r\n";
             // 
             // Ficha_4
             // 
@@ -156,6 +223,15 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Ficha_4.TabStop = false;
             this.Ficha_4.Text = "Ficha de pago 4";
             // 
+            // pack_4
+            // 
+            this.pack_4.AutoSize = true;
+            this.pack_4.Location = new System.Drawing.Point(166, 68);
+            this.pack_4.Name = "pack_4";
+            this.pack_4.Size = new System.Drawing.Size(63, 13);
+            this.pack_4.TabIndex = 12;
+            this.pack_4.Text = "**Paquete**";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -164,6 +240,26 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Fecha";
+            // 
+            // Cant_4
+            // 
+            this.Cant_4.AutoSize = true;
+            this.Cant_4.Location = new System.Drawing.Point(237, 42);
+            this.Cant_4.Name = "Cant_4";
+            this.Cant_4.Size = new System.Drawing.Size(65, 13);
+            this.Cant_4.TabIndex = 11;
+            this.Cant_4.Text = "**Cantidad**";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(22, 43);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(380, 39);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
+    "pto de\r\nPAGO DE TERCER MENSUALIDAD por la compra y adquisición\r\nde un paquete fu" +
+    "nerario tipo:\r\n";
             // 
             // label2
             // 
@@ -187,102 +283,6 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label1.Size = new System.Drawing.Size(242, 31);
             this.label1.TabIndex = 12;
             this.label1.Text = "Funeraria Camacho";
-            // 
-            // pack_1
-            // 
-            this.pack_1.AutoSize = true;
-            this.pack_1.Location = new System.Drawing.Point(359, 58);
-            this.pack_1.Name = "pack_1";
-            this.pack_1.Size = new System.Drawing.Size(63, 13);
-            this.pack_1.TabIndex = 3;
-            this.pack_1.Text = "**Paquete**";
-            // 
-            // pack_2
-            // 
-            this.pack_2.AutoSize = true;
-            this.pack_2.Location = new System.Drawing.Point(166, 67);
-            this.pack_2.Name = "pack_2";
-            this.pack_2.Size = new System.Drawing.Size(63, 13);
-            this.pack_2.TabIndex = 6;
-            this.pack_2.Text = "**Paquete**";
-            // 
-            // cant_2
-            // 
-            this.cant_2.AutoSize = true;
-            this.cant_2.Location = new System.Drawing.Point(237, 41);
-            this.cant_2.Name = "cant_2";
-            this.cant_2.Size = new System.Drawing.Size(65, 13);
-            this.cant_2.TabIndex = 5;
-            this.cant_2.Text = "**Cantidad**";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(380, 39);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
-    "pto de\r\nPAGO DE PRIMER MENSUALIDAD por la compra y adquisición \r\nde un paquete f" +
-    "unerario tipo:\r\n";
-            // 
-            // pack_3
-            // 
-            this.pack_3.AutoSize = true;
-            this.pack_3.Location = new System.Drawing.Point(166, 67);
-            this.pack_3.Name = "pack_3";
-            this.pack_3.Size = new System.Drawing.Size(63, 13);
-            this.pack_3.TabIndex = 9;
-            this.pack_3.Text = "**Paquete**";
-            // 
-            // Cant_3
-            // 
-            this.Cant_3.AutoSize = true;
-            this.Cant_3.Location = new System.Drawing.Point(237, 41);
-            this.Cant_3.Name = "Cant_3";
-            this.Cant_3.Size = new System.Drawing.Size(65, 13);
-            this.Cant_3.TabIndex = 8;
-            this.Cant_3.Text = "**Cantidad**";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 41);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(380, 39);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
-    "pto de\r\nPAGO DE SEGUNDA MENSUALIDAD  por la compra y adquisición\r\nde un paquete " +
-    "funerario tipo:\r\n";
-            // 
-            // pack_4
-            // 
-            this.pack_4.AutoSize = true;
-            this.pack_4.Location = new System.Drawing.Point(166, 68);
-            this.pack_4.Name = "pack_4";
-            this.pack_4.Size = new System.Drawing.Size(63, 13);
-            this.pack_4.TabIndex = 12;
-            this.pack_4.Text = "**Paquete**";
-            // 
-            // Cant_4
-            // 
-            this.Cant_4.AutoSize = true;
-            this.Cant_4.Location = new System.Drawing.Point(237, 42);
-            this.Cant_4.Name = "Cant_4";
-            this.Cant_4.Size = new System.Drawing.Size(65, 13);
-            this.Cant_4.TabIndex = 11;
-            this.Cant_4.Text = "**Cantidad**";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 43);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(380, 39);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Comprobante de pago por la cantidad de:                               , por conce" +
-    "pto de\r\nPAGO DE TERCER MENSUALIDAD por la compra y adquisición\r\nde un paquete fu" +
-    "nerario tipo:\r\n";
             // 
             // button1
             // 
@@ -310,6 +310,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.Ficha_4);
             this.Controls.Add(this.Ficha_1);
             this.Name = "Fichas_Pago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fichas_Pago";
             this.Ficha_1.ResumeLayout(false);
             this.Ficha_1.PerformLayout();

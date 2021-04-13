@@ -284,6 +284,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "Datos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
