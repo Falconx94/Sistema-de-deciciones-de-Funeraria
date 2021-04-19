@@ -16,7 +16,7 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Paquetes());
+            Application.Run(new splash());
         }
     }
 }

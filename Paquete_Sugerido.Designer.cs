@@ -225,9 +225,11 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Paquete_Sugerido";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Paquete Sugerido";
+            this.Text = "P A Q U E T E   S U G E R I D O";
             this.Load += new System.EventHandler(this.Paquete_Sugerido_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
