@@ -55,7 +55,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 53);
+            this.label2.Location = new System.Drawing.Point(33, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 17);
             this.label2.TabIndex = 5;
@@ -130,9 +130,10 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.bt_Oro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Paquetes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Funeraria Camacho";
+            this.Text = "P A Q U E T E S    D I S P O N I B L E S ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

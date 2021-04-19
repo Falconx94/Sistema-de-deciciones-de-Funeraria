@@ -29,6 +29,7 @@ namespace Sistema_de_deciciones_de_Funeraria
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fichas_Pago));
             this.Ficha_1 = new System.Windows.Forms.GroupBox();
             this.pack_1 = new System.Windows.Forms.Label();
             this.cant_1 = new System.Windows.Forms.Label();
@@ -309,9 +310,10 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.Ficha_3);
             this.Controls.Add(this.Ficha_4);
             this.Controls.Add(this.Ficha_1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Fichas_Pago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Fichas_Pago";
+            this.Text = "F I C H A S   D E   P A G O";
             this.Ficha_1.ResumeLayout(false);
             this.Ficha_1.PerformLayout();
             this.Ficha_2.ResumeLayout(false);

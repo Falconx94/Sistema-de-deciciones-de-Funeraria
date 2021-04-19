@@ -34,7 +34,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             try
             {
                 id++;
-                cmd = new SqlCommand("Inser into clientes (idcliente,nombre,domicilio,estadocivil,hijos,ingresoMen,ingresoAcum)" +
+                cmd = new SqlCommand("Insert into clientes (idcliente,nombre,domicilio,estadocivil,hijos,ingresoMen,ingresoAcum)" +
                     "values("+id+",'"+cliente+"','"+domicilio+"','"+ec+"',"+hijos+","+in_mensual+","+in_acum+")",con);
                 cmd.ExecuteNonQuery();
                 salida = "Datos Capturados";
