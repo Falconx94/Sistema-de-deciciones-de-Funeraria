@@ -19,4 +19,4 @@ namespace Sistema_de_deciciones_de_Funeraria
             Application.Run(new splash());
         }
     }
-}
+}   
