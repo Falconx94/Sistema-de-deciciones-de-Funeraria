@@ -48,7 +48,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.rb_EC_Casado = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.CBox_Hijos = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DT_Box = new System.Windows.Forms.DateTimePicker();
             this.txt_Ingresos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -243,12 +243,12 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.CBox_Hijos.Size = new System.Drawing.Size(167, 21);
             this.CBox_Hijos.TabIndex = 18;
             // 
-            // dateTimePicker1
+            // DT_Box
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(607, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.DT_Box.Location = new System.Drawing.Point(594, 57);
+            this.DT_Box.Name = "DT_Box";
+            this.DT_Box.Size = new System.Drawing.Size(213, 20);
+            this.DT_Box.TabIndex = 19;
             // 
             // txt_Ingresos
             // 
@@ -266,7 +266,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(828, 493);
             this.Controls.Add(this.txt_Ingresos);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DT_Box);
             this.Controls.Add(this.CBox_Hijos);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
@@ -314,7 +314,7 @@ namespace Sistema_de_deciciones_de_Funeraria
         private System.Windows.Forms.RadioButton rb_EC_Casado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox CBox_Hijos;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DT_Box;
         private System.Windows.Forms.TextBox txt_Ingresos;
     }
 }

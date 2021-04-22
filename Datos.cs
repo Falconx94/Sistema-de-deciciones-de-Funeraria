@@ -13,12 +13,12 @@ namespace Sistema_de_deciciones_de_Funeraria
     public partial class Datos : Form
     {
         ConexionBD conex = new ConexionBD();
-        public int hijos, id=0;
+        public int hijos, id=0,idpaquete;
         public byte ec;
         public float in_mensual, in_acum;
         public double total, enganche, totalsup, mensualidad;
         public string paquete, cliente, domicilio;
-        reglas r = new reglas();
+        //reglas r = new reglas();
         Paquete_Sugerido ps = new Paquete_Sugerido();
         public Datos()
         {
@@ -47,14 +47,20 @@ namespace Sistema_de_deciciones_de_Funeraria
             if (e.KeyChar == (char)Keys.Enter)
             {
                 cliente = txt_Cliente.Text;
-                if (conex.Buscar(id, cliente, domicilio, ec, hijos, in_mensual, in_acum))
+                if (conex.Buscar(id, cliente, domicilio, ec, hijos, in_mensual, in_acum, idpaquete))
                 {
-                    MessageBox.Show("Ya existe el cliente registrado");
+                    if (MessageBox.Show("Cliente ya registrado. Desea actualizarlo?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        txt_Domicilio.Enabled = true;
+                        groupBox1.Enabled = true;
+                        CBox_Hijos.Enabled = true;
+                        txt_Ingresos.Enabled = true;
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Cliente no registrado");
-                    conex.Buscar_2(id, cliente, domicilio, ec, hijos, in_mensual, in_acum);
+                    conex.Buscar_2(id, cliente, domicilio, ec, hijos, in_mensual, in_acum, idpaquete);
                     id++;
                     txt_Domicilio.Enabled = true;
                     groupBox1.Enabled = true;
@@ -165,7 +171,7 @@ namespace Sistema_de_deciciones_de_Funeraria
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            conex.Inserta_Cliente(id, cliente, domicilio, ec, hijos, in_mensual, in_acum);
+            conex.Inserta_Cliente(id, cliente, domicilio, ec, hijos, in_mensual, in_acum,idpaquete);
             ps.ShowDialog();
         }
     }

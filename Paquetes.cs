@@ -12,8 +12,13 @@ namespace Sistema_de_deciciones_de_Funeraria
 {
     public partial class Paquetes : Form
     {
+        ConexionBD conex = new ConexionBD();
+        Datos da = new Datos();
+        public int id = 0, paquete=0, idconsulta =0;
+        public string fecha;
         public Paquetes()
         {
+            conex.Con_Main();
             InitializeComponent();
         }
 
@@ -22,8 +27,20 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             if(MessageBox.Show("Estandar: Ataúd Metálico, Mobiliario para 50 personas, Traslado C-I-P, 4 sirios. $15,600.00. ¿Desea contratar este paquete?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information)== DialogResult.Yes)
             {
-                Datos da = new Datos();
-                da.Show();
+                idconsulta++;
+                fecha = Convert.ToString(DateTime.Now);
+                paquete = 2;
+                reinicia_eco:
+                if(conex.Buscar_consulta(idconsulta, fecha, paquete))
+                {
+                    idconsulta++;
+                    goto reinicia_eco;
+                }
+                else
+                {
+                    conex.Inserta_Consulta(idconsulta, fecha, paquete);
+                    da.Show();
+                }
                 this.Hide();
             }
             else
@@ -36,8 +53,20 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             if (MessageBox.Show("Economico: Velación en capilla, Flores, Servicio de Cafetería Ilimitado $28,400.00 ¿Desea contratar este paquete?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Datos da = new Datos();
-                da.Show();
+                idconsulta++;
+                fecha = Convert.ToString(DateTime.Now);
+                paquete = 1;
+                reinicia_estandar:
+                if (conex.Buscar_consulta(idconsulta, fecha, paquete))
+                {
+                    idconsulta++;
+                    goto reinicia_estandar;
+                }
+                else
+                {
+                    conex.Inserta_Consulta(idconsulta, fecha, paquete);
+                    da.Show();
+                }
                 this.Hide();
             }
             else
@@ -50,8 +79,20 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             if (MessageBox.Show("Oro: Misa de cuerpo presente, Ataúd de Madera, Sirios Ilimitados $65,400.00. ¿Desea contratar este paquete?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Datos da = new Datos();
-                da.Show();
+                idconsulta++;
+                fecha = Convert.ToString(DateTime.Now);
+                paquete = 2;
+                reinicia_oro:
+                if (conex.Buscar_consulta(idconsulta, fecha, paquete))
+                {
+                    idconsulta++;
+                    goto reinicia_oro;
+                }
+                else
+                {
+                    conex.Inserta_Consulta(idconsulta, fecha, paquete);
+                    da.Show();
+                }
                 this.Hide();
             }
             else
@@ -64,8 +105,20 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             if (MessageBox.Show("Diamante: Ataúd es de madera fina o plus (Cedro, Caoba), Cremación.  $105,200.00. ¿Desea contratar este paquete?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Datos da = new Datos();
-                da.Show();
+                idconsulta++;
+                fecha = Convert.ToString(DateTime.Now);
+                paquete = 2;
+                reinicia_diamante:
+                if (conex.Buscar_consulta(idconsulta, fecha, paquete))
+                {
+                    idconsulta++;
+                    goto reinicia_diamante;
+                }
+                else
+                {
+                    conex.Inserta_Consulta(idconsulta, fecha, paquete);
+                    da.Show();
+                }
                 this.Hide();
             }
             else

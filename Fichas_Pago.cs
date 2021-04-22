@@ -12,7 +12,6 @@ namespace Sistema_de_deciciones_de_Funeraria
 {
     public partial class Fichas_Pago : Form
     {
-        Paquetes f1 = new Paquetes();
         public Fichas_Pago()
         {
             InitializeComponent();
@@ -20,7 +19,7 @@ namespace Sistema_de_deciciones_de_Funeraria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            f1.ShowDialog();
+            
         }
     }
 }
