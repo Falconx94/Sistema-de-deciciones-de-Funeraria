@@ -22,24 +22,43 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             Datos da = new Datos();
             da.Show();
+            this.Close();
         }
 
         private void bt_Economico_Click(object sender, EventArgs e)
         {
             Datos da = new Datos();
             da.Show();
+            this.Close();
         }
 
         private void bt_Oro_Click(object sender, EventArgs e)
         {
             Datos da = new Datos();
             da.Show();
+            this.Close();
         }
 
         private void bt_Diamante_Click(object sender, EventArgs e)
         {
             Datos da = new Datos();
+            this.Close();
             da.Show();
+        }
+
+        private void Paquetes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                Datos da = new Datos();
+                da.Show();
+                this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
