@@ -9,36 +9,35 @@ namespace Sistema_de_deciciones_de_Funeraria
 {
     class reglas
     {
-        public int resultado, hijos;
-        public string paquete;
-        public float ingresos, in_mensual, enganche, in_acum, acum_res, total, totalsup;
-        public byte ec;
+        public int resultado, paquete;
+        public double ingresos, mensualidad, enganche, acumulables, acum_res;
+        public byte estadocivil;
         //recordad transformar el tipo de dato del textbox antes de llamar  a la funcion
         // REGLAS DE DECISIÓN: (PARA EL INGRESO ACUMULABLE)
-       /*public void Desicion_Rules() // En base al ingreso registrado, registrar el procentaje de su ingreso acumulable
+        /*public void Desicion_Rules(byte estadocivil ,int hijos, double ingresos, double acumulables) // En base al ingreso registrado, registrar el procentaje de su ingreso acumulable
         {
             // soltero 0, casado 1
             try
             {
-                if (ec == 0 && hijos == 0) // soltero y sin hijos
+                if (estadocivil == 0 && hijos == 0 ) // soltero y sin hijos
                 {
-                    in_acum = (float)(in_mensual * 0.80);
+                    acumulables = ingresos * 0.80 ;
                 }
-                if (ec == 1 && hijos == 0) // casado y sin hijos
+                if (estadocivil == 1 && hijos == 0) // casado y sin hijos
                 {
-                    in_acum = (float)(in_mensual * 0.60);
+                    acumulables = ingresos * 0.60;
                 }
-                if (ec == 1 && hijos == 1) // casado y con 1 hijo
+                if (estadocivil == 1 && hijos == 1) // casado y con 1 hijo
                 {
-                    in_acum = (float)(in_mensual * 0.50);
+                    acumulables = ingresos * 0.50;
                 }
-                if (ec == 1 && hijos == 2) // casado y con 2 hijos
+                if (estadocivil == 1 && hijos == 2) // casado y con 2 hijos
                 {
-                    in_acum = (float)(in_mensual * 0.45);
+                    acumulables = ingresos * 0.45;
                 }
-                if (ec == 1 && hijos >= 3) // casado y con 3 hijos o mas
+                if (estadocivil == 1 && hijos >= 3) // casado y con 3 hijos o mas
                 {
-                    in_acum = (float)(in_mensual * 0.40);
+                    acumulables = ingresos * 0.40;
                 }
             }
             catch (Exception ex)
@@ -46,58 +45,60 @@ namespace Sistema_de_deciciones_de_Funeraria
                 MessageBox.Show("Error", "Ha ocurrido la siguiente excepcion: " + ex);
             }
         }
-        public void Acumulable() //REGLAS DE DECISIÓN: (PARA EL PLAN SUGERIDO)
+        */
+        public int Acumulable(double acumulables) //REGLAS DE DECISIÓN: (PARA EL PLAN SUGERIDO)
         {
 
             // acum sera la cantidad del ingreso acumulable
-            if (in_acum <= 3000)
+            if (acumulables <= 3000)
             {
                 MessageBox.Show("Se sugiere usar el Plan Economico para este cliente.");
-                paquete = "Plan Economico";
+                paquete = 1;
             }
-            if (in_acum >= 3001 && in_acum <= 8000)
+            if (acumulables >= 3001 && acumulables <= 8000)
             {
                 MessageBox.Show("Se sugiere usar el Plan Estandar para este cliente.");
-                paquete = "Plan Estandar";
+                paquete = 2;
             }
-            if (in_acum >= 8001 && in_acum <= 15000)
+            if (acumulables >= 8001 && acumulables <= 15000)
             {
                 MessageBox.Show("Se sugiere usar el Plan Oro para este cliente.");
-                paquete = "Plan Oro";
+                paquete = 3;
             }
-            if (in_acum >= 15001)
+            if (acumulables >= 15001)
             {
                 MessageBox.Show("Se sugiere usar el Plan Diamante para este cliente.");
-                paquete = "Plan Diamante";
+                paquete = 4;
             }
-        }*/
+            return paquete;
+        }
 
         //Para pantalla antes de psasar a imprimir fichas de pago
-        public double ObtenerEnganche() // total sera el precio total del paquete elegido
+        public double ObtenerEnganche(double total) // total sera el precio total del paquete elegido
         {
             enganche = (30 / 100) * total;
             return enganche;
         }
-        public double ObtenerMensualidad() // total sera el precio total del paquete elegido
+        public double ObtenerMensualidad (double total) // total sera el precio total del paquete elegido
         {
-            in_mensual = (total - enganche) / 3;
-            return in_mensual;
+            mensualidad = (total - enganche) / 3;
+            return mensualidad;
         }
         //Regla para cuando el cliente desee actualizar a un paquete superior
-        public double ActualizarSuperior() // totalsup sera el precio total del paquete superior
+        public double ActualizarSuperior(double totalsup) // totalsup sera el precio total del paquete superior
         {
             enganche = (75 / 100) * totalsup;
-            in_mensual = (totalsup - enganche) / 3;
-            return in_mensual;
+            mensualidad = (totalsup - enganche) / 3;
+            return mensualidad;
         }
         public void limpieza()
         {
             resultado = 0;
-            paquete = "";
+            paquete = 0;
             ingresos = 0;
-            in_mensual = 0;
+            mensualidad = 0;
             enganche = 0;
-            ec = 0;
+            estadocivil = 0;
         }
     }
 }
