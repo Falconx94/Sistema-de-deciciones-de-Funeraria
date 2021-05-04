@@ -13,86 +13,13 @@ namespace Sistema_de_deciciones_de_Funeraria
 {
     public partial class Datos : Form
     {
-        #region variables 
-        //ConexionBD conex = new ConexionBD();
-        ConexionBD obj_conexion;
-        SqlConnection conexion;
-        public int hijos, idcliente=0, idpaquete;
+        ConexionBD conex = new ConexionBD();
+        public int hijos, id=0;
         public byte ec;
         public double total, enganche, totalsup, mensualidad, in_mensual, in_acum;
         public string paquete, cliente, domicilio;
-        #endregion
-
-        private void Datos_Load(object sender, EventArgs e)
-        {
-            Max();
-            CleanAll();
-        }
-
-        #region metodos
-        private void Max()
-        {
-            obj_conexion = new ConexionBD();
-            conexion = new SqlConnection(obj_conexion.Con());
-            conexion.Open();
-            string query = "select max(idcliente)+1 as ultimo from clientes";
-            SqlCommand command = new SqlCommand(query, conexion);
-            SqlDataReader leer = command.ExecuteReader();
-            if (leer.Read())
-            {
-                idcliente = Convert.ToInt32(leer["ultimo"].ToString());
-            }
-        } // B I E N
-        private void Busqueda()
-        {
-            obj_conexion = new ConexionBD();
-            conexion = new SqlConnection(obj_conexion.Con());
-            conexion.Open();
-            string query = "select * from clientes where nombre = @nombre";
-            SqlCommand comando = new SqlCommand(query, conexion);
-            comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@nombre", txt_Cliente.Text);
-            SqlDataReader leer = comando.ExecuteReader();
-            if (leer.Read())
-            {
-                MessageBox.Show("Este cliente ya esta registrado en la base de datos.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_Cliente.Clear();
-                txt_Cliente.Focus();
-            }
-            else
-            {
-                txt_Domicilio.Enabled = true;
-                txt_Domicilio.Focus();
-            }
-        } // B I E N
-        private void CleanAll()
-        {
-            bt_Continue.Visible = false;
-            lbl_sugerido.Visible = false;
-            lbl_acumulable.Visible = false;
-            txt_Ingresos.Clear();
-            txt_Ingresos.Enabled = false;
-            CBox_Hijos.SelectedIndex = 0;
-            CBox_Hijos.Enabled = false;
-
-            rb_casado.AutoCheck = false;
-            rb_casado.Checked = false;
-            rb_casado.AutoCheck = true;
-
-            rb_soltero.AutoCheck = false;
-            rb_soltero.Checked = false;
-            rb_soltero.AutoCheck = true;
-
-            groupBox1.Enabled = false;
-            txt_Domicilio.Clear();
-            txt_Domicilio.Enabled = false;
-
-            txt_Cliente.Clear();
-            txt_Cliente.Focus();
-            Max();
-        } //LA T E R    U S E 
-        #endregion 
-
+        reglas r = new reglas();
+        Paquete_Sugerido ps = new Paquete_Sugerido();
         public Datos()
         {
             InitializeComponent();
@@ -139,14 +66,17 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             if (e.KeyChar == 13)
             {
-                if (string.IsNullOrEmpty(txt_Domicilio.Text))
+                cliente = txt_Cliente.Text;
+                if (conex.Buscar(id, cliente, domicilio, ec, hijos, in_mensual, in_acum))
                 {
-                    MessageBox.Show("El recuadro no debe estar vacio!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txt_Domicilio.Clear();
-                    txt_Domicilio.Focus();
+                    MessageBox.Show("Ya existe el cliente registrado");
                 }
                 else
                 {
+                    MessageBox.Show("Cliente no registrado");
+                    conex.Buscar_2(id, cliente, domicilio, ec, hijos, in_mensual, in_acum);
+                    id++;
+                    txt_Domicilio.Enabled = true;
                     groupBox1.Enabled = true;
                 }
             }
@@ -368,25 +298,31 @@ namespace Sistema_de_deciciones_de_Funeraria
             CBox_Hijos.Enabled = true;
             ec = 1;
         }
-
-        //public void Valida_datos()
-        //{   
-        //    if(rb_casado.Checked == true)
-        //    {
-        //        ec = 1;
-        //        hijos = Convert.ToInt32(CBox_Hijos.Text);
-        //        bt_Continue.Enabled = true;
-        //    }
-        //    else if(rb_soltero.Checked == true)
-        //    {
-        //        ec = 0;
-        //        bt_Continue.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Seleccione un estado civil");
-        //    }
+        public void Valida_datos()
+        {   
+            if(rb_EC_Casado.Checked == true)
+            {
+                ec = 1;
+                hijos = Convert.ToInt32(CBox_Hijos.Text);
+                Capturar();
+                bt_Continue.Enabled = true;
+            }
+            else if(rb_EC_Soltero.Checked == true)
+            {
+                ec = 0;
+                Capturar();
+                bt_Continue.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un estado civil");
+            }
             
-        //}
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conex.Inserta_Cliente(id, cliente, domicilio, ec, hijos, in_mensual, in_acum);
+            ps.ShowDialog();
+        }
     }
 }

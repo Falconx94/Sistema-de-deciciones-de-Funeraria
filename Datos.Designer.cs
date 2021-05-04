@@ -48,12 +48,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.label12 = new System.Windows.Forms.Label();
             this.CBox_Hijos = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txt_Ingresos = new System.Windows.Forms.MaskedTextBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_Ingresos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -235,11 +230,11 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.toolTip1.SetToolTip(this.CBox_Hijos, "Elegir una opcion");
             this.CBox_Hijos.SelectionChangeCommitted += new System.EventHandler(this.CBox_Hijos_SelectionChangeCommitted);
             // 
-            // dateTimePicker1
+            // DT_Box
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(609, 57);
+            this.dateTimePicker1.Location = new System.Drawing.Point(607, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 19;
             // 
             // txt_Ingresos
@@ -310,7 +305,7 @@ namespace Sistema_de_deciciones_de_Funeraria
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txt_Ingresos);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DT_Box);
             this.Controls.Add(this.CBox_Hijos);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
@@ -359,11 +354,6 @@ namespace Sistema_de_deciciones_de_Funeraria
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox CBox_Hijos;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MaskedTextBox txt_Ingresos;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_Ingresos;
     }
 }
