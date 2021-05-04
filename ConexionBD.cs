@@ -22,6 +22,7 @@ namespace Sistema_de_deciciones_de_Funeraria
         {
             string mi_conexion = ("Data Source=RYZEN3\\SQLEXPRESS;Initial Catalog=funeraria;Integrated Security=True");
             return mi_conexion;
+            // nada xd
         }
         //public void Con_Main()
         //{
